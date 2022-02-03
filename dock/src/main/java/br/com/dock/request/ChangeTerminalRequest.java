@@ -1,22 +1,7 @@
-package br.com.dock.model;
+package br.com.dock.request;
 
+public class ChangeTerminalRequest {
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@Entity
-@Table(name = "TERMINAL")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class TerminalEntity{
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer logic;
 	private String serial;
 	private String model;
 	private Integer sam;
@@ -26,20 +11,6 @@ public class TerminalEntity{
 	private Integer mxr;
 	private Integer mxf;
 	private String PVERFM;
-
-	/**
-	 * @return the logic
-	 */
-	public Integer getLogic() {
-		return logic;
-	}
-
-	/**
-	 * @param logic the logic to set
-	 */
-	public void setLogic(Integer logic) {
-		this.logic = logic;
-	}
 
 	/**
 	 * @return the serial
@@ -67,20 +38,6 @@ public class TerminalEntity{
 	 */
 	public void setModel(String model) {
 		this.model = model;
-	}
-
-	/**
-	 * @return the version
-	 */
-	public String getVersion() {
-		return version;
-	}
-
-	/**
-	 * @param version the version to set
-	 */
-	public void setVersion(String version) {
-		this.version = version;
 	}
 
 	/**
@@ -123,6 +80,20 @@ public class TerminalEntity{
 	 */
 	public void setPlat(Integer plat) {
 		this.plat = plat;
+	}
+
+	/**
+	 * @return the version
+	 */
+	public String getVersion() {
+		return version;
+	}
+
+	/**
+	 * @param version the version to set
+	 */
+	public void setVersion(String version) {
+		this.version = version;
 	}
 
 	/**
