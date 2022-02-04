@@ -22,52 +22,52 @@ Foram criados 4 endpoints:<br />
         "PVERFM":”PWWIN"<br />
       }<br />
       <br />
--> Get with param
-  - Metodo...........: getAllTerminalsById
-  - Entrada..........: id (equivalente ao campo 'logic')
-  - Retorno..........: Retorna o objeto pesquisado caso exista no banco de dados.
-  - Url..............: http://localhost:9180/v1/terminals/44332211
-  - Modelo de retorno:
-      {
-        "logic": 44332211,
-        "serial": "123",
-        "model": "PWWIN",
-        "sam": 0,
-        "ptid": "F04A2E4088B",
-        "plat": 4,
-        "version": "8.00b3",
-        "mxr": 0,
-        "mxf":16777216,
-        "PVERFM":”PWWIN"
-      }
-      
--> Patch with param
-  - Metodo.............: changeTerminal
-  - Entrada............: id (equivalente ao campo 'logic')
-  - Body da requisição.:
-      {
-        "serial": "123",
-        "model": "PWWIN",
-        "sam": 0,
-        "ptid": "F04A2E4088B",
-        "plat": 4,
-        "version": "8.00b3",
-        "mxr": 0,
-        "mxf":16777216,
-        "PVERFM":”PWWIN"
-      }
-  - Retorno............: Retorna o objeto alterado caso exista no banco de dados.
-  - Url................: http://localhost:9180/v1/terminals/44332211
-  - Modelo de retorno..:
-      {
-        "logic": 44332211,
-        "serial": "123",
-        "model": "PWWIN",
-        "sam": 0,
-        "ptid": "F04A2E4088B",
-        "plat": 4,
-        "version": "8.00b3",
-        "mxr": 0,
-        "mxf":16777216,
-        "PVERFM":”PWWIN"
-      }
+-> Get with param<br />
+  - Metodo...........: getAllTerminalsById<br />
+  - Entrada..........: id (equivalente ao campo 'logic')<br />
+  - Retorno..........: Retorna o objeto pesquisado caso exista no banco de dados.<br />
+  - Url..............: http://localhost:9180/v1/terminals/44332211<br />
+  - Modelo de retorno:<br />
+      {<br />
+        "logic": 44332211,<br />
+        "serial": "123",<br />
+        "model": "PWWIN",<br />
+        "sam": 0,<br />
+        "ptid": "F04A2E4088B",<br />
+        "plat": 4,<br />
+        "version": "8.00b3",<br />
+        "mxr": 0,<br />
+        "mxf":16777216,<br />
+        "PVERFM":”PWWIN"<br />
+      }<br />
+      <br />
+-> Patch with param<br />
+  - Metodo.............: changeTerminal<br />
+  - Entrada............: id (equivalente ao campo 'logic')<br />
+  - Body da requisição.:<br />
+      {<br />
+        "serial": "123",<br />
+        "model": "PWWIN",<br />
+        "sam": 0,<br />
+        "ptid": "F04A2E4088B",<br />
+        "plat": 4,<br />
+        "version": "8.00b3",<br />
+        "mxr": 0,<br />
+        "mxf":16777216,<br />
+        "PVERFM":”PWWIN"<br />
+      }<br />
+  - Retorno............: Retorna o objeto alterado caso exista no banco de dados.<br />
+  - Url................: http://localhost:9180/v1/terminals/44332211<br />
+  - Modelo de retorno..:<br />
+      {<br />
+        "logic": 44332211,<br />
+        "serial": "123",<br />
+        "model": "PWWIN",<br />
+        "sam": 0,<br />
+        "ptid": "F04A2E4088B",<br />
+        "plat": 4,<br />
+        "version": "8.00b3",<br />
+        "mxr": 0,<br />
+        "mxf":16777216,<br />
+        "PVERFM":”PWWIN"<br />
+      }<br />
