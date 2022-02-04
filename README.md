@@ -5,10 +5,10 @@ Para gravar os dados, foi utilizado o banco de dados H2 j√° embarcado na aplica√
 
 Foram criados 4 endpoints:<br />
 -> Get<br />
-    - Metodo...........: getAllTerminals<br />
-    - Retorno..........: Retorna uma lista de todos os terminais cadastrados<br />
-    - Url..............: http://localhost:9180/v1/terminals<br />
-    - Modelo de retorno:<br />
+  - Metodo...........: getAllTerminals<br />
+  - Retorno..........: Retorna uma lista de todos os terminais cadastrados<br />
+  - Url..............: http://localhost:9180/v1/terminals<br />
+  - Modelo de retorno:<br />
       {<br />
         "logic": 44332211,<br />
         "serial": "123",<br />
