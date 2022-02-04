@@ -91,3 +91,10 @@ Para gravar os dados, foi utilizado o banco de dados H2 já embarcado na aplica�
         "mxf":16777216,<br />
         "PVERFM":”PWWIN"<br />
       }<br />
+# COMO EXECUTAR A APLICAÇÃO<br />
+- Fazer o clone da aplicação na sua máquina.
+- Após o clone, importar o projeto para a sua IDE (Eclipse, STS, etc).
+- Clicar com o botão direito do mouse em cima do projeto -> Run as -> Maven Clean
+- Após o Maven clean, clicar com o botão direito do mouse em cima do projeto -> Run as -> Maven Install
+- Após o Maven Install, clicar com o botão direito do mouse em cima do projeto -> Run as -> Spring boot app
+- Com os passos acima, o projeto vai subir na porta 9180 e poderá ser acessado assim: http://localhost:9180/v1/terminals e utilizar os endpoinst relatados acima
