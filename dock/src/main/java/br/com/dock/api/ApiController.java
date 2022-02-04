@@ -46,7 +46,7 @@ public class ApiController {
 		return terminalService.changeTerminal(id, changeTerminal);
 	}
 
-	@PostMapping
+	@PostMapping(value = "", consumes = MediaType.TEXT_HTML_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	@Produces(MediaType.TEXT_HTML_VALUE)
 	public TerminalEntity addTerminal(@RequestBody String body) {
