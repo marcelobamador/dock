@@ -3,8 +3,8 @@ O desafio foi desenvolvido utilizando a linguagem JAVA na sua versão 11. O JAVA
 
 Para gravar os dados, foi utilizado o banco de dados H2 já embarcado na aplicação. O acesso ao banco de dados H2 dar-se após subir a aplicação e acessar o link: http://localhost:9180/h2 - Atualmente a porta da aplicação é 9180 (pode ser configurada no arquivo application.properties na propriedade server.port).
 
-Foram criados 4 endpoints:<br />
--> Get<br />
+# Foram criados 4 endpoints:<br />
+Get<br />
   - Metodo...........: getAllTerminals<br />
   - Retorno..........: Retorna uma lista de todos os terminais cadastrados<br />
   - Url..............: http://localhost:9180/v1/terminals<br />
