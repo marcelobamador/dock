@@ -93,6 +93,7 @@ Para gravar os dados, foi utilizado o banco de dados H2 já embarcado na aplica�
       }<br />
 # COMO EXECUTAR A APLICAÇÃO<br />
 - Fazer o clone da aplicação na sua máquina.
+- Selecionar a branch <b>MASTER</b>
 - Após o clone, importar o projeto para a sua IDE (Eclipse, STS, etc).
 - Clicar com o botão direito do mouse em cima do projeto -> Run as -> Maven Clean
 - Após o Maven clean, clicar com o botão direito do mouse em cima do projeto -> Run as -> Maven Install
