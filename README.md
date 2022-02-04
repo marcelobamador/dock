@@ -4,7 +4,7 @@ O desafio foi desenvolvido utilizando a linguagem JAVA na sua versão 11. O JAVA
 Para gravar os dados, foi utilizado o banco de dados H2 já embarcado na aplicação. O acesso ao banco de dados H2 dar-se após subir a aplicação e acessar o link: http://localhost:9180/h2 - Atualmente a porta da aplicação é 9180 (pode ser configurada no arquivo application.properties na propriedade server.port).
 
 # Foram criados 4 endpoints:<br />
-Get<br />
+# Get<br />
   - Metodo...........: getAllTerminals<br />
   - Retorno..........: Retorna uma lista de todos os terminais cadastrados<br />
   - Url..............: http://localhost:9180/v1/terminals<br />
@@ -22,7 +22,7 @@ Get<br />
         "PVERFM":”PWWIN"<br />
       }<br />
       <br />
--> Get with param<br />
+# Get with param<br />
   - Metodo...........: getAllTerminalsById<br />
   - Entrada..........: id (equivalente ao campo 'logic')<br />
   - Retorno..........: Retorna o objeto pesquisado caso exista no banco de dados.<br />
@@ -41,7 +41,7 @@ Get<br />
         "PVERFM":”PWWIN"<br />
       }<br />
       <br />
--> Patch with param<br />
+# Patch with param<br />
   - Metodo.............: changeTerminal<br />
   - Entrada............: id (equivalente ao campo 'logic')<br />
   - Body da requisição.:<br />
@@ -58,6 +58,26 @@ Get<br />
       }<br />
   - Retorno............: Retorna o objeto alterado caso exista no banco de dados.<br />
   - Url................: http://localhost:9180/v1/terminals/44332211<br />
+  - Modelo de retorno..:<br />
+      {<br />
+        "logic": 44332211,<br />
+        "serial": "123",<br />
+        "model": "PWWIN",<br />
+        "sam": 0,<br />
+        "ptid": "F04A2E4088B",<br />
+        "plat": 4,<br />
+        "version": "8.00b3",<br />
+        "mxr": 0,<br />
+        "mxf":16777216,<br />
+        "PVERFM":”PWWIN"<br />
+      }<br />
+# Post<br />
+  - Metodo.............: addTerminal<br />
+  - Entrada............: String
+  - Obs................: Para que seja aceito a string enviada, deve-se colocar na requisição o header: Content-Type: text/html. Se for enviado como JSON não será aceito.
+  - Body da requisição.: 44332211;123;PWWIN;0;F04A2E4088B;4;8.00b3;0;16777216;PWWIN<br />
+  - Retorno............: Retorna o objeto cadastrado no banco de dados.<br />
+  - Url................: http://localhost:9180/v1/terminals<br />
   - Modelo de retorno..:<br />
       {<br />
         "logic": 44332211,<br />
