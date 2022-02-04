@@ -12,5 +12,7 @@ public interface TerminalService {
 	TerminalEntity getAllTerminalsById(Integer id);
 	
 	TerminalEntity changeTerminal(Integer id, ChangeTerminalRequest changeTerminal);
+	
+	TerminalEntity addTerminal(String body);
 
 }

@@ -10,6 +10,7 @@ import br.com.dock.model.TerminalEntity;
 import br.com.dock.repository.TerminalRepository;
 import br.com.dock.request.ChangeTerminalRequest;
 import br.com.dock.service.TerminalService;
+import br.com.dock.util.Util;
 
 import static java.util.Objects.isNull;
 
@@ -39,16 +40,33 @@ public class TerminalServiceImpl implements TerminalService {
 		}
 		
 		terminalEntityDb.setModel(changeTerminal.getModel());
-		terminalEntityDb.setMxf(changeTerminal.getMxf());
-		terminalEntityDb.setMxr(changeTerminal.getMxr());
-		terminalEntityDb.setPlat(changeTerminal.getPlat());
-		terminalEntityDb.setPtid(changeTerminal.getPtid());
-		terminalEntityDb.setPVERFM(changeTerminal.getPVERFM());
-		terminalEntityDb.setSam(changeTerminal.getSam());
 		terminalEntityDb.setSerial(changeTerminal.getSerial());
 		terminalEntityDb.setVersion(changeTerminal.getVersion());
 		
+		if(changeTerminal.getMxf() != null)
+			terminalEntityDb.setMxf(changeTerminal.getMxf());
+		
+		if(changeTerminal.getMxr() != null)
+			terminalEntityDb.setMxr(changeTerminal.getMxr());
+		
+		if(changeTerminal.getPlat() != null)
+			terminalEntityDb.setPlat(changeTerminal.getPlat());
+		
+		if(changeTerminal.getPtid() == null || !changeTerminal.getPtid().isEmpty())
+			terminalEntityDb.setPtid(changeTerminal.getPtid());
+		
+		if(changeTerminal.getPVERFM() == null || !changeTerminal.getPVERFM().isEmpty())
+			terminalEntityDb.setPVERFM(changeTerminal.getPVERFM());
+		
+		if(changeTerminal.getSam() != null)
+			terminalEntityDb.setSam(changeTerminal.getSam());
+		
 		return this.terminalRepository.save(terminalEntityDb);
+	}
+	
+	public TerminalEntity addTerminal(String body) {
+		TerminalEntity terminalEntity = Util.converString(body);
+		return this.terminalRepository.save(terminalEntity);
 	}
 
 }

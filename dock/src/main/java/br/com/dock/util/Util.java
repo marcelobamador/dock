@@ -42,4 +42,21 @@ public class Util {
 		returnDTO.setVersion(terminalEntity.getVersion());
 		return returnDTO;
 	}
+	
+	public static TerminalEntity converString(String body) {
+		String array[] = new String[10];
+		array = body.split(";");
+		TerminalEntity terminalEntity = new TerminalEntity();
+		terminalEntity.setLogic(Integer.parseInt(array[0]));
+		terminalEntity.setSerial(array[1]);
+		terminalEntity.setModel(array[2]);
+		terminalEntity.setSam(Integer.parseInt(array[3]));
+		terminalEntity.setPtid(array[4]);
+		terminalEntity.setPlat(Integer.parseInt(array[5]));
+		terminalEntity.setVersion(array[6]);
+		terminalEntity.setMxr(Integer.parseInt(array[7]));
+		terminalEntity.setMxf(Integer.parseInt(array[8]));
+		terminalEntity.setPVERFM(array[9]);
+		return terminalEntity;
+	}
 }

@@ -1,13 +1,27 @@
 package br.com.dock.request;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class ChangeTerminalRequest {
 
+	@NotBlank(message = "Serial inválido")
 	private String serial;
+
+	@NotBlank(message = "Model inválido")
 	private String model;
+
+	@Min(value = 0)
 	private Integer sam;
+
 	private String ptid;
 	private Integer plat;
+
+	@NotBlank(message = "Version inválido")
 	private String version;
+
 	private Integer mxr;
 	private Integer mxf;
 	private String PVERFM;

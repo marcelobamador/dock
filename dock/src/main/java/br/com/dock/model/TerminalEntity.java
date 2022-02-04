@@ -2,10 +2,10 @@ package br.com.dock.model;
 
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -15,14 +15,24 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class TerminalEntity{
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@NotNull
 	private Integer logic;
+	
+	@NotNull
 	private String serial;
+	
+	@NotNull
 	private String model;
+	
+	@Min(value = 0)
 	private Integer sam;
+	
 	private String ptid;
 	private Integer plat;
+	
+	@NotNull
 	private String version;
+	
 	private Integer mxr;
 	private Integer mxf;
 	private String PVERFM;
