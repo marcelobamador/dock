@@ -21,7 +21,7 @@ jobs:
       # Use mvn clean and package as the standard maven build phase
       - run:
           name: Build
-          command: mvn -f /dock/pom.xml
+          command: mvn -f /dock/dock/pom.xml
       # Then run your tests!
       - run:
           name: Test
